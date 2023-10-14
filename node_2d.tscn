@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://34ym1ra7hoyn"]
 
 [ext_resource type="Texture2D" uid="uid://bruuoukhr24mm" path="res://stems/bezel-240p.png" id="1_wwwb6"]
-[ext_resource type="Shader" path="res://stems/screen.gdshader" id="2_1ungo"]
+[ext_resource type="Shader" path="res://src/screen.gdshader" id="2_eodkt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_63ps1"]
-shader = ExtResource("2_1ungo")
+shader = ExtResource("2_eodkt")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_i1gbe"]
 
@@ -20,9 +20,13 @@ layout_mode = 2
 texture = ExtResource("1_wwwb6")
 stretch_mode = 5
 
-[node name="Screen" type="TextureRect" parent="CenterContainer"]
+[node name="Screen" type="TextureRect" parent="CenterContainer/Bezel"]
 modulate = Color(0, 0, 0, 1)
 material = SubResource("ShaderMaterial_63ps1")
 custom_minimum_size = Vector2(920, 680)
 layout_mode = 2
+offset_left = 180.0
+offset_top = 20.0
+offset_right = 1100.0
+offset_bottom = 700.0
 texture = SubResource("CanvasTexture_i1gbe")
